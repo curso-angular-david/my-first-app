@@ -1,1 +1,6 @@
-<p>book works!</p>
+<h2>Libro</h2>
+<p>Nombre: {{ name }}</p>
+<p>Autor: {{ author }}</p>
+<p>Año: {{ year }} </p>
+<p>Unidades disponibles: {{ getAvailableUnits() }}</p>
+<p>Está disponible: {{ (getAvailableUnits()>0) ? "Si" : "No"}}</p>
