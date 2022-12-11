@@ -4,3 +4,14 @@
 <p>Año: {{ year }} </p>
 <p>Unidades disponibles: {{ getAvailableUnits() }}</p>
 <p>Está disponible: {{ (getAvailableUnits()>0) ? "Si" : "No"}}</p>
+<p>Quien lo tiene prestado: {{ borrowerName }}</p>
+<input 
+  type="text"  
+  [disabled]="getAvailableUnits()===0"
+  [(ngModel)]="borrowerName"
+/>
+<input 
+  type="button" 
+  value="Enviar!"
+  (click)="sendData()" 
+/>

@@ -10,9 +10,15 @@ export class BookComponent {
   author = "Miguel de Cervantes"
   year = 1910
   edition = 10
-  private availableUnits = 0
+  private availableUnits = 20
+  borrowerName = ""
 
   getAvailableUnits() {
     return this.availableUnits
   }
+
+  sendData() {
+    alert("Se ha enviado la data!")
+  }
+
 }
