@@ -13,7 +13,12 @@ export class NewBookComponent {
   inputGenre: string = "";
   hasRegistered: boolean = false;
 
-  @Output() createBookEvent = new EventEmitter<string>();
+  /* 
+    El evento tiene como parámetro una interfaz IBook
+    ya que este tipo de objeto es el que se le envia al
+    componente padre con el evento
+  */
+  @Output() createBookEvent = new EventEmitter<IBook>();
 
   addBook() {
     const newBook: IBook = {
@@ -21,7 +26,8 @@ export class NewBookComponent {
       author: this.inputAuthor,
       genre: this.inputGenre 
     }
-    this.books.push(newBook)
+    //this.books.push(newBook)
+    this.createBookEvent.emit(newBook)
     this.hasRegistered = true;
   }
 }

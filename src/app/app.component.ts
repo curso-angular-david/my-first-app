@@ -29,8 +29,12 @@ export class AppComponent {
     }
   ]
 
-  createBook() {
-    
+  /* 
+    La función crear libro recibe newBook del evento 
+    emitido por el hijo: createBookEvent
+  */
+  createBook(newBook: IBook) {
+    this.RootBooks.push(newBook)
   }
 }
 
