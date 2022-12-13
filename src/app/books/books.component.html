@@ -1,1 +1,10 @@
 <h1>Libros</h1>
+
+<ul>
+  <li *ngFor="let book of books; let idx=index">
+    {{idx+1}}. {{book.name}} {{book.author}} 
+    <span [ngClass]="(book.genre==='Fantasia') ? 'highlightGenre': '' ">
+      {{book.genre}}
+    </span>
+  </li>
+</ul>

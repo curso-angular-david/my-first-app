@@ -1,4 +1,4 @@
 <span>{{ title }} {{ greating }}</span>
 <span>My name is {{ name }}</span>
-<app-books></app-books>
-<app-book></app-book>
+<app-books [books]="RootBooks"></app-books>
+<app-new-book (createBookEvent)="createBook()"></app-new-book>
